@@ -12,7 +12,9 @@ import org.junit.runner.RunWith;
         features="src/test/java/features",
         glue = {"gluecode"},
         publish = true,
-        tags = "@Proba"
+        tags = "@Proba",
+        plugin = {"pretty", "html:target/cucumber-reports.html"},
+        monochrome = true
 )
 
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Esperando</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+        #message {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+    <script>
+        function startCountdown(seconds) {
+            let counter = seconds;
+            const interval = setInterval(() => {
+                document.getElementById("message").innerText = "Esperando " + counter + " segundos";
+                counter--;
+                if (counter < 0) {
+                    clearInterval(interval);
+                    // Puede agregar alguna acción cuando el tiempo llegue a cero si lo desea
+                }
+            }, 1000);
+        }
+    </script>
+</head>
+<body>
+<h1 id="message">Esperando...</h1>
+<img src="carganaruto.gif" alt="Cargando..."/>
+</body>
+</html>
