@@ -2,7 +2,7 @@ Feature: pruebas2
   Pruebasasd2
   Background:
     Given Espera 10 segundos
-    When Ingresa a la pagina
+    When Ingresa a la pagina 'google'
 
   Scenario: ingersar222
     Given esto es given

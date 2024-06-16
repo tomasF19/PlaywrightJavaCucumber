@@ -46,8 +46,8 @@ public class Test {
         System.out.println("prueba");
     }
 
-    @When("Ingresa a la pagina")
-    public void visitPage(){
+    @When("Ingresa a la pagina {string}")
+    public void visitPage(String url){
         hooks.getPage().navigate("https://www.google.com/");
         System.out.println(hooks.getPage().title());
     }
